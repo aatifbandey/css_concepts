@@ -108,5 +108,18 @@ Concept on Static | Relative | Absolute | Fixed
 	Fixed:
 	This position is relative to viewport 
 
+Difference b/w 
+	
+	@media (max-width:632px) vs @media screen and (max-width:632px) vs @media only screen and (max-width:632px)
+	
+	@media (max-width:632px)
+	This one is saying for a window with a max-width of 632px that you want to apply these style and lesser width than 632px 
 
+	@media screen and (max-width:632px)
+	This one is saying for a device with a screen and a window with max-width of 632px apply the style. The difference is media type should be screen not print or other media type
+
+	@media only screen and (max-width:632px)
+	The keyword ‘only’ can also be used to hide style sheets from older user agents. User agents must process media queries starting with ‘only’ as if the ‘only’ keyword was not present
+
+	For more ref : http://stackoverflow.com/questions/8549529/what-is-the-difference-between-screen-and-only-screen-in-media-queries
 
