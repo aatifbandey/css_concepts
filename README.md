@@ -15,7 +15,8 @@ Padding vs Margin
 
 Box Sizing 
 	
-	Its a property used to tell browser 
+	Its a property used to tell browser the space and it takes the height and if padding is given it doesnt increase
+	the container height
 	https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_box-sizing 
 
 Psuedo elements
@@ -122,4 +123,48 @@ Difference b/w
 	The keyword ‘only’ can also be used to hide style sheets from older user agents. User agents must process media queries starting with ‘only’ as if the ‘only’ keyword was not present
 
 	For more ref : http://stackoverflow.com/questions/8549529/what-is-the-difference-between-screen-and-only-screen-in-media-queries
+
+Specificity 
+	inline sytyle
+	ID - 100
+	Class
+	Attributes
+	Sudeo class
+
+Semantic HTMl
+	it represents the content of web page.
+	Eg <h1> to <h6> are semantic tags
+		<p> is a semantic tag
+		<code>, <abbr>, <span> etc are semantic tags
+
+	Memorize how to measure specificity. “Start at 0, add 1000 for style attribute, add 100 for each ID, add 10 for each attribute, class or pseudo-class, add 1 for each element name or pseudo-element. So in
+	body #content .data img:hover
+	the specificity value would be 122 (0,1,2,2 or 0122): 100 for #content, 10 for .data, 10 for :hover, 1 for body and 1 for img.” [CSS Specificity]
+
+	Important table for order specificity
+
+	1	* { }	0
+	2	li { }	1 (one element)
+	3	li:first-line { }	2 (one element, one pseudo-element)
+	4	ul li { }	2 (two elements)
+	5	ul ol+li { }	3 (three elements)
+	6	h1 + *[rel=up] { }	11 (one attribute, one element)
+	7	ul ol li.red { }	13 (one class, three elements)
+	8	li.red.level { }	21 (two classes, one element)
+	9	style=””	1000 (one inline styling)
+	10	p { }	1 (one HTML selector)
+	11	div p { }	2 (two HTML selectors)
+	12	.sith	10 (one class selector)
+	13	div p.sith { }	12 (two HTML selectors and a class selector)
+	14	#sith	100 (one id selector)
+	15	body #darkside .sith p { }	112 (HTML selector, id selector, class selector, HTML selector; 1+100+10+1)
+
+	Why it is important ?
+
+	Many visually impaired people rely on speech browsers to read pages back to them. These programs cannot interpret pages very well unless they are clearly explained.
+
+	Search engines need to understand what your content is about in order to rank you properly on search engines. Semantic code tends to improve your placement on search engines
+
+	Semantic code makes site updates easier because you can apply design style to headings across an entire site instead of on a per page basis.
+
 
