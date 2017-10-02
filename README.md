@@ -131,12 +131,6 @@ Specificity
 	Attributes
 	Sudeo class
 
-Semantic HTMl
-	it represents the content of web page.
-	Eg <h1> to <h6> are semantic tags
-		<p> is a semantic tag
-		<code>, <abbr>, <span> etc are semantic tags
-
 	Memorize how to measure specificity. “Start at 0, add 1000 for style attribute, add 100 for each ID, add 10 for each attribute, class or pseudo-class, add 1 for each element name or pseudo-element. So in
 	body #content .data img:hover
 	the specificity value would be 122 (0,1,2,2 or 0122): 100 for #content, 10 for .data, 10 for :hover, 1 for body and 1 for img.” [CSS Specificity]
@@ -159,6 +153,13 @@ Semantic HTMl
 	14	#sith	100 (one id selector)
 	15	body #darkside .sith p { }	112 (HTML selector, id selector, class selector, HTML selector; 1+100+10+1)
 
+
+
+Semantic HTMl
+	it represents the content of web page.
+	Eg <h1> to <h6> are semantic tags
+		<p> is a semantic tag
+		<code>, <abbr>, <span> etc are semantic tags
 	Why it is important ?
 
 	Many visually impaired people rely on speech browsers to read pages back to them. These programs cannot interpret pages very well unless they are clearly explained.
@@ -167,4 +168,23 @@ Semantic HTMl
 
 	Semantic code makes site updates easier because you can apply design style to headings across an entire site instead of on a per page basis.
 
+	Features:
+
+		No More Types for Scripts and Links
+		<link rel="stylesheet" href="path/to/stylesheet.css" />  no need of type attribute
+		<script src="path/to/script.js"></script>
+
+		Email Inputs
+		Placeholders
+		Session storage
+		Local Storage
+		Semantic header and footer
+		Autofocus attribute on inputs
+		Required attribute on inputs
+		Regular Expressions
+			Thanks to the new "pattern" attribute, we can insert a regular expression directly into our markup
+			<input pattern="[A-Za-z]{4,10}" >
+
+		When to Use a <div> Now?
+		if you find that you need to wrap a block of code within a wrapper element specifically for the purpose of positioning the content, a <div> makes perfect sense. However, if you're instead wrapping a new blog post, or, perhaps, a list of links in your footer, consider using the <article> and <nav> elements, respectively. They're more semantic
 
